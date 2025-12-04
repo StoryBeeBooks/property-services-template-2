@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Monarch Property Care</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/translations.js"></script>
+</head>
+<body>
+
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Page Hero -->
+    <section class="page-hero" style="background-image: url('Image Assets/get in touch hero.jpeg');">
+        <div class="hero-content">
+            <p class="section-label" data-i18n="contact.hero.label">Let's Talk</p>
+            <h1 data-i18n="contact.hero.title">Get in Touch</h1>
+            <p data-i18n="contact.hero.subtitle">Ready to transform your property? We're here to help.</p>
+        </div>
+    </section>
+
+    <!-- Contact Container -->
+    <div class="contact-container animate-on-scroll">
+        
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <h2 data-i18n="contact.info.title">Contact Information</h2>
+            <p data-i18n="contact.info.desc">Have a question or need a quote? Reach out to us using the form or the details below. We aim to respond to all inquiries within 24 hours.</p>
+            
+            <div class="info-item">
+                <div class="info-icon">📞</div>
+                <div>
+                    <h3 data-i18n="contact.phone.title">Phone</h3>
+                    <p>(555) 123-4567</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">✉️</div>
+                <div>
+                    <h3 data-i18n="contact.email.title">Email</h3>
+                    <p>info@monarchpropertycare.com</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">📍</div>
+                <div>
+                    <h3 data-i18n="contact.address.title">Address</h3>
+                    <p>100 King St W, Toronto, ON M5X 1A9</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">🗺️</div>
+                <div>
+                    <h3 data-i18n="contact.area.title">Service Area</h3>
+                    <p data-i18n="contact.area.desc">Serving the Greater Toronto Area including Toronto, Mississauga, Brampton, Markham, Vaughan, Oakville, and surrounding regions.</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">⏰</div>
+                <div>
+                    <h3 data-i18n="contact.hours.title">Business Hours</h3>
+                    <p data-i18n="contact.hours.desc">Mon - Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 4:00 PM<br>Sun: Closed</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+            <h2 data-i18n="contact.form.title">Send Us a Message</h2>
+            <form action="#" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name" data-i18n="contact.form.name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-i18n="contact.form.email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone" data-i18n="contact.form.phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+                    </div>
+                    <div class="form-group">
+                        <label for="service" data-i18n="contact.form.service">Service Interested In</label>
+                        <select id="service" name="service">
+                            <option value="" data-i18n="contact.form.select">Select a Service...</option>
+                            <option value="window-cleaning" data-i18n="contact.form.option.window">Window Cleaning</option>
+                            <option value="eavestrough" data-i18n="contact.form.option.eaves">Eavestrough Cleaning</option>
+                            <option value="pressure-washing" data-i18n="contact.form.option.pressure">Pressure Washing</option>
+                            <option value="deck" data-i18n="contact.form.option.deck">Deck Cleaning/Staining</option>
+                            <option value="snow" data-i18n="contact.form.option.snow">Snow Removal</option>
+                            <option value="other" data-i18n="contact.form.option.other">Other / Multiple Services</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="address" data-i18n="contact.form.address">Property Address</label>
+                    <input type="text" id="address" name="address" placeholder="123 Main Street, Toronto, ON">
+                </div>
+
+                <div class="form-group">
+                    <label for="message" data-i18n="contact.form.message">Tell Us About Your Project *</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Please describe what services you need, any specific concerns, and your preferred timeline..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit" data-i18n="contact.form.submit">Send Message →</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Map Section -->
+    <div class="map-section">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.2692853965!2d-79.38318!3d43.64856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34d68bf33a9b%3A0x15edd8c4de1c7581!2sToronto%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sus!4v1234567890"
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+
+    <!-- Footer Placeholder -->
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

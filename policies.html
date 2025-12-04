@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policies | Monarch Property Care</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/translations.js"></script>
+</head>
+<body>
+
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Page Hero -->
+    <section class="page-hero" style="background-image: url('Image Assets/Index/hero section.jpeg');">
+        <div class="hero-content">
+            <p class="section-label" data-i18n="policies.hero.label">Legal</p>
+            <h1 data-i18n="policies.hero.title">Company Policies</h1>
+            <p data-i18n="policies.hero.subtitle">Transparency, trust, and your peace of mind.</p>
+        </div>
+    </section>
+
+    <!-- Policies Content -->
+    <div class="policies-container animate-on-scroll">
+        
+        <!-- Navigation for Policies -->
+        <div class="policy-nav">
+            <a href="#privacy" class="policy-link active" data-i18n="policies.nav.privacy">Privacy Policy</a>
+            <a href="#terms" class="policy-link" data-i18n="policies.nav.terms">Terms of Service</a>
+            <a href="#guarantee" class="policy-link" data-i18n="policies.nav.guarantee">Satisfaction Guarantee</a>
+        </div>
+
+        <div class="policy-content">
+            
+            <!-- Privacy Policy -->
+            <section id="privacy" class="policy-section">
+                <h2 data-i18n="policies.privacy.title">Privacy Policy</h2>
+                <p class="last-updated" data-i18n="policies.updated">Last Updated: December 4, 2025</p>
+                
+                <h3 data-i18n="policies.privacy.1.title">1. Information We Collect</h3>
+                <p data-i18n="policies.privacy.1.text">At Monarch Property Care, we respect your privacy. We collect personal information that you voluntarily provide to us when you request a quote, schedule a service, or contact us. This includes your name, address, email address, phone number, and property details.</p>
+
+                <h3 data-i18n="policies.privacy.2.title">2. How We Use Your Information</h3>
+                <p data-i18n="policies.privacy.2.text">We use your information solely for the purpose of providing our services, communicating with you regarding your appointments, sending invoices, and responding to your inquiries. We do not sell, trade, or rent your personal identification information to others.</p>
+
+                <h3 data-i18n="policies.privacy.3.title">3. Data Security</h3>
+                <p data-i18n="policies.privacy.3.text">We implement appropriate data collection, storage, and processing practices and security measures to protect against unauthorized access, alteration, disclosure, or destruction of your personal information.</p>
+
+                <h3 data-i18n="policies.privacy.4.title">4. Third-Party Services</h3>
+                <p data-i18n="policies.privacy.4.text">We may use third-party service providers to help us operate our business (such as payment processors or scheduling software). We may share your information with these third parties for those limited purposes provided that you have given us your permission.</p>
+            </section>
+
+            <hr class="policy-divider">
+
+            <!-- Terms of Service -->
+            <section id="terms" class="policy-section">
+                <h2 data-i18n="policies.terms.title">Terms of Service</h2>
+                <p class="last-updated" data-i18n="policies.updated">Last Updated: December 4, 2025</p>
+
+                <h3 data-i18n="policies.terms.1.title">1. Service Agreement</h3>
+                <p data-i18n="policies.terms.1.text">By scheduling a service with Monarch Property Care, you agree to provide safe access to the property and water supply if required. We reserve the right to refuse service if we deem the conditions unsafe for our team.</p>
+
+                <h3 data-i18n="policies.terms.2.title">2. Cancellations & Rescheduling</h3>
+                <p data-i18n="policies.terms.2.text">We understand that plans change. We request at least 24 hours' notice for cancellations or rescheduling. Cancellations made less than 24 hours before the scheduled service time may be subject to a cancellation fee.</p>
+
+                <h3 data-i18n="policies.terms.3.title">3. Payment Terms</h3>
+                <p data-i18n="policies.terms.3.text">Payment is due upon completion of the service unless otherwise agreed upon in writing. We accept cash, credit cards, and electronic transfers. Late payments may incur interest charges.</p>
+
+                <h3 data-i18n="policies.terms.4.title">4. Liability</h3>
+                <p data-i18n="policies.terms.4.text">While we take the utmost care with your property, Monarch Property Care is not liable for pre-existing damages (such as loose siding, scratched glass, or rotted wood) that may be discovered during the cleaning process.</p>
+            </section>
+
+            <hr class="policy-divider">
+
+            <!-- Satisfaction Guarantee -->
+            <section id="guarantee" class="policy-section">
+                <h2 data-i18n="policies.guarantee.title">100% Satisfaction Guarantee</h2>
+                
+                <p data-i18n="policies.guarantee.intro">We stand behind the quality of our work. Our goal is to leave every customer completely satisfied with their service.</p>
+
+                <h3 data-i18n="policies.guarantee.promise.title">Our Promise</h3>
+                <p data-i18n="policies.guarantee.promise.text">If you are not completely satisfied with any aspect of our service, please contact us within 24 hours of the job completion. We will return to re-clean the specific area or address the issue at no additional charge.</p>
+
+                <h3 data-i18n="policies.guarantee.conditions.title">Conditions</h3>
+                <p data-i18n="policies.guarantee.conditions.text">This guarantee covers the quality of labor and workmanship. It does not cover normal accumulation of dirt after the service has been performed or issues arising from pre-existing damage or weather conditions immediately following the service.</p>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Footer Placeholder -->
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Handle active state on policy links
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('.policy-link');
+            
+            links.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    links.forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+                });
+            });
+
+            // Highlight based on scroll position
+            window.addEventListener('scroll', () => {
+                const sections = document.querySelectorAll('.policy-section');
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 150;
+                    if (window.scrollY >= sectionTop) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                links.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
