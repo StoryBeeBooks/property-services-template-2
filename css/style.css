@@ -192,6 +192,8 @@ img {
 .nav-links li {
     list-style: none;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
 }
 
 .nav-links a {
@@ -199,9 +201,10 @@ img {
     font-size: clamp(0.8rem, 0.9vw, 0.9375rem);
     color: var(--text-muted);
     position: relative;
-    padding: clamp(0.35rem, 0.5vw, 0.5rem) 0;
     letter-spacing: 0.02em;
     transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
 }
 
 .nav-links a:hover {
@@ -219,6 +222,9 @@ img {
     letter-spacing: 0.01em;
     transition: var(--transition);
     white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-nav:hover {
@@ -234,6 +240,9 @@ img {
     transition: var(--transition-fast);
     min-width: auto;
     text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .lang-switch::after {
