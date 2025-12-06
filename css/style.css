@@ -113,7 +113,7 @@ img {
     inset-inline: 0;
     top: 0;
     z-index: 1000;
-    padding: clamp(0.5rem, 0.8vw, 0.875rem) clamp(1.5rem, 3vw, 5%);
+    padding: clamp(0.8rem, 1.2vw, 1.2rem) clamp(1.5rem, 3vw, 5%);
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -201,6 +201,7 @@ img {
 }
 
 .nav-links a {
+    display: inline-block;
     font-size: clamp(0.75rem, 1.1vw, 0.95rem);
     color: var(--text-muted);
     text-decoration: none;
@@ -208,6 +209,7 @@ img {
     padding-block: 0.2rem;
     white-space: nowrap;
     transition: color 0.3s ease;
+    line-height: 1.2;
 }
 
 .nav-links a::after {
