@@ -127,7 +127,7 @@ img {
     align-items: center;
     padding: clamp(1rem, 1.5vw, 2rem) var(--edge-padding);
     gap: 1rem;
-    max-width: 100%;
+    width: 100%;
 }
 
 .navbar.scrolled {
@@ -146,6 +146,7 @@ img {
     align-items: center;
     gap: 0.75rem;
     flex-shrink: 0;
+    width: auto;
 }
 
 .logo-container {
@@ -153,6 +154,7 @@ img {
     align-items: center;
     gap: 1.5rem;
     flex-shrink: 0;
+    width: auto;
 }
 
 .logo-icon {
@@ -199,6 +201,7 @@ img {
     flex-shrink: 0;
     margin: 0;
     padding: 0;
+    width: auto;
 }
 
 .nav-links li {
@@ -2098,6 +2101,31 @@ footer {
 /* ============================================
    RESPONSIVE DESIGN
    ============================================ */
+
+/* Desktop navbar - ensure single row */
+@media (min-width: 769px) {
+    .navbar-inner {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+    }
+    
+    .logo-container,
+    .nav-links {
+        display: inline-flex !important;
+        width: auto !important;
+        position: static !important;
+        transform: none !important;
+        height: auto !important;
+        background: transparent !important;
+        flex-direction: row !important;
+    }
+    
+    .hamburger {
+        display: none !important;
+    }
+}
+
 @media (max-width: 1200px) {
     .services-grid,
     .testimonials-grid,
