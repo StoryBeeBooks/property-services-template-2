@@ -2195,6 +2195,7 @@ footer {
     .lang-switch {
         padding: 0.2rem 0.5rem;
         font-size: 0.65rem;
+        margin-left: auto;
     }
     
     .nav-links {
@@ -2250,6 +2251,8 @@ footer {
     
     .hamburger {
         display: flex;
+        z-index: 1002;
+        position: relative;
     }
     
     /* Hero Section Mobile */
