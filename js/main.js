@@ -25,13 +25,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Navbar scroll effect
 function initNavbarScroll() {
-    const header = document.querySelector('.site-header');
-    if (header) {
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 100) {
-                header.classList.add('scrolled');
+                navbar.classList.add('scrolled');
             } else {
-                header.classList.remove('scrolled');
+                navbar.classList.remove('scrolled');
             }
         });
     }
@@ -80,13 +80,13 @@ function applyTranslations() {
 }
 
 function initMobileMenu() {
-    const menuToggle = document.getElementById('menu-toggle');
-    const mainNav = document.getElementById('main-nav');
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
 
-    if (menuToggle && mainNav) {
-        menuToggle.addEventListener('click', () => {
-            mainNav.classList.toggle('active');
-            menuToggle.classList.toggle('active');
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('toggle');
         });
     }
 }
