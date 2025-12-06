@@ -69,7 +69,8 @@ function applyTranslations() {
             if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
                 el.placeholder = translations[currentLang][key];
             } else {
-                el.textContent = translations[currentLang][key];
+                // Use innerHTML to properly render HTML tags like <br>
+                el.innerHTML = translations[currentLang][key];
             }
         }
     });
